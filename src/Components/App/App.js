@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="top-bar">
-          <p>Makrdown app</p>
+          <p>Makrdown</p>
         </div>
         <Editor />
       </div>
