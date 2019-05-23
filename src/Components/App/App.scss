@@ -1,31 +1,58 @@
+$top-bar: black;
+$top-bar-text: white;
+$preview: #cccccc;
+$preview-text: #333;
+$editor: #1C2022;
+$editor-text: white;
+
+@font-face {
+  font-family: palatino;
+  src: url('../../fonts/pala.ttf');
+}
 body {
   * {
     padding: 0;
     margin: 0;
     border: 0;
   }
-  background-color: blue;
+  background-color: $top-bar;
   overflow: hidden;
   .App {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 8% 92%;
 
     .top-bar {
       grid-column: 1/3;
       grid-row: 1/2;
-      background-color: yellow;
-      height: 10vh;
+      background-color: $top-bar;
+      color: $top-bar-text;
+      height: 8vh;
+      .markdown-logo {
+        // display: inline;
+        position: relative;
+        top: 10%;
+        left: 2%;
+        height: 80%;
+      }
+      p {
+        font-family: oswald;
+        display: inline;
+        margin-left: 5%;
+        font-size: 2rem;
+      }
     }
     .editor {
       grid-column: 1/2;
       grid-row: 2/3;
-      background-color: red;
-      height: 90vh;
+      height: 92vh;
       textarea {
         height: 100%;
         width: 100%;
-        font-size: 0.8rem;
+        padding-left: 2%;
+        background-color: $editor;
+        color: $editor-text;
+        font-size: 1.2rem;
         resize: none;
       }
       textarea:focus {
@@ -35,11 +62,14 @@ body {
     .preview {
       grid-column: 2/3;
       grid-row: 2/3;
-      background-color: lightcoral;
-      height: 90vh;
-      font-size: 0.8rem;
+      background-color: $preview;
+      color: $preview-text;
+      // font-family: 'Open Sans', sans-serif;
+      font-family: palatino;
+      height: 92vh;
+      font-size: 1.2rem;
       word-break: break-all;
-      padding: 2%;
+      padding-left: 2%;
       overflow-y: auto;
     }
   }
@@ -47,14 +77,14 @@ body {
 
 // Markdown specific
 blockquote {
-  background: #571845;
-  border-left: 10px solid #900C3E;
-  color: #FFC300;
-  margin: 1.5em 10px;
+  background: #28333F;
+  border-left: 10px solid #151b22;
+  color: white;
+  margin: 1rem 10px;
   padding: 0.5em 10px;
 }
 table {
-  width: 80%;
+  width: 50%;
   margin-left: 10%;
   background-color: #2C3845;
   color: white;
@@ -70,4 +100,19 @@ td {
 }
 tr:nth-child(odd) {
   background-color: #28333F;
+}
+a {
+  color: blue;
+}
+li {
+  margin-left: 5%;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+hr {
+  border-top: 1px solid black;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }

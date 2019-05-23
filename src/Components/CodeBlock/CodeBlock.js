@@ -18,6 +18,7 @@ export class CodeBlock extends PureComponent {
 
   render() {
     const { language, value } = this.props;
+    console.log(duotoneDark)
     return (
       <SyntaxHighlighter language={language} style={duotoneDark}>
         {value}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Editor } from '../index';
 import './App.scss';
+import logo from '../../img/image.png'
 
 
 export default class App extends Component {
@@ -8,7 +9,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="top-bar">
-          <p>Makrdown</p>
+          <img className="markdown-logo" src={logo} alt="md.logo" />
+          <p>Markdown Preview</p>
         </div>
         <Editor />
       </div>

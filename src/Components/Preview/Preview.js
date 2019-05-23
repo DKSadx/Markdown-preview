@@ -4,6 +4,8 @@ import { CodeBlock } from '../index';
 
 export class Preview extends Component {
   render() {
+    // var messageBody = document.querySelector('.preview');
+    // messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
     return (
       <div className="preview" >
         <ReactMarkdown
