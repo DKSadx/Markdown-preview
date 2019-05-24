@@ -17,6 +17,7 @@ $editor-text: white;
   font-family: oswald;
   src: url('../../fonts/Oswald-Bold.ttf');
 }
+
 body {
   * {
     padding: 0;
@@ -59,7 +60,7 @@ body {
         padding-left: 2%;
         background-color: $editor;
         color: $editor-text;
-        font-size: 1.2rem;
+        font-size: 2vmin;
         resize: none;
       }
       textarea:focus {
@@ -73,7 +74,7 @@ body {
       color: $preview-text;
       font-family: palatino;
       height: 92vh;
-      font-size: 1.2rem;
+      font-size: 2vmin;
       word-break: break-all;
       padding-left: 2%;
       overflow-y: auto;
@@ -121,4 +122,19 @@ hr {
   border-top: 1px solid black;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 1vmin;
+}
+::-webkit-scrollbar-track {
+  background: #AAA;
+}
+::-webkit-scrollbar-thumb {
+  background: $editor;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #343047;
 }
