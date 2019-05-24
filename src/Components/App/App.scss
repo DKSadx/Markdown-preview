@@ -9,6 +9,14 @@ $editor-text: white;
   font-family: palatino;
   src: url('../../fonts/pala.ttf');
 }
+@font-face {
+  font-family: roboto;
+  src: url('../../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: oswald;
+  src: url('../../fonts/Oswald-Bold.ttf');
+}
 body {
   * {
     padding: 0;
@@ -29,7 +37,6 @@ body {
       color: $top-bar-text;
       height: 8vh;
       .markdown-logo {
-        // display: inline;
         position: relative;
         top: 10%;
         left: 2%;
@@ -64,7 +71,6 @@ body {
       grid-row: 2/3;
       background-color: $preview;
       color: $preview-text;
-      // font-family: 'Open Sans', sans-serif;
       font-family: palatino;
       height: 92vh;
       font-size: 1.2rem;
@@ -88,7 +94,7 @@ table {
   margin-left: 10%;
   background-color: #2C3845;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: roboto, sans-serif;
   font-weight: 500;
 
 }

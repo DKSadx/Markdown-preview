@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Preview } from '../index';
 
 export class Editor extends Component {
@@ -11,7 +11,7 @@ export class Editor extends Component {
     // Creates ref for textarea so that the cursor position can be set
     this.textareaRef = React.createRef();
     this.onChange = this.onChange.bind(this);
-    this.enableTabs = this.enableTabs.bind(this);
+    this.insertTab = this.insertTab.bind(this);
   }
   onChange(e) {
     this.setState({
@@ -19,13 +19,12 @@ export class Editor extends Component {
       cursorPos: e.target.selectionStart
     });
   }
-  // Enables tabs for indenting in textarea
-  enableTabs(e) {
+  insertTab(e) {
     if (e.keyCode === 9) {
       e.preventDefault();
-      const val = this.state.input
-      const cursorPos = e.target.selectionStart
-      // const tab = val.slice(0, cursorPos) + '\t' + val.slice(cursorPos, val.length);
+      const val = this.state.input;
+      const cursorPos = e.target.selectionStart;
+      // Inserts tab at the cursor position and moves it one place forward
       this.setState({
         input: val.slice(0, cursorPos) + '\t' + val.slice(cursorPos, val.length),
         cursorPos: cursorPos + 1
@@ -41,16 +40,16 @@ export class Editor extends Component {
   }
   render() {
     const { input } = this.state;
-    // console.log(this.state.cursorPos, this.inputElRef)
     return (
       <>
         <div className="editor">
           <textarea
             ref={this.textareaRef}
-            onChange={this.onChange}
             value={input}
             spellCheck={false}
-            onKeyDown={this.enableTabs}
+            placeholder="Insert markdown to convert"
+            onChange={this.onChange}
+            onKeyDown={this.insertTab}
           />
         </div>
         <Preview text={input} />
