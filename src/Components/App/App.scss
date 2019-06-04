@@ -47,7 +47,7 @@ body {
         font-family: oswald;
         display: inline;
         margin-left: 5%;
-        font-size: 2rem;
+        font-size: 5vmin;
       }
     }
     .editor {
@@ -137,4 +137,39 @@ hr {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #343047;
+}
+
+// Styling for tablet size screens and smaller
+@media screen and (max-width: 768px) {
+  body {
+    .App {
+      grid-template-columns: 100%;
+      grid-template-rows: 6% 47% 47%;
+      .top-bar {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 6vh;
+        .markdown-logo {
+          position: relative;
+          top: 10%;
+          left: 2%;
+          height: 80%;
+        }
+      }
+      .editor {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 47vh;
+        textarea {
+          font-size: 3vmin;
+        }
+      }
+      .preview {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        height: 47vh;
+        font-size: 3vmin;
+      }
+    }
+  }
 }
