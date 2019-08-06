@@ -8,7 +8,12 @@ Markdown editor with real-time preview made with ReactJS.
 
 <hr />
 
-<iframe  src="https://player.vimeo.com/video/352279175"  width="800"  height="455"  frameborder="0"  allow="autoplay; fullscreen"  allowfullscreen></iframe>
+<!-- <iframe  src="https://player.vimeo.com/video/352279175"  width="800"  height="455"  frameborder="0"  allow="autoplay; fullscreen"  allowfullscreen></iframe> -->
+
+**Video:**
+<br />
+<a href="https://player.vimeo.com/video/352279175" target="_blank"><img src="video-thumbnail.png"
+alt="IMAGE ALT TEXT HERE" width="800" height="455"/></a>
 
 <hr />
 
