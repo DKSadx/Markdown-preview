@@ -1,6 +1,6 @@
 {
   "short_name": "MDC",
-  "name": "Markdown converter",
+  "name": "Markdown preview",
   "start_url": ".",
   "display": "standalone"
 }
