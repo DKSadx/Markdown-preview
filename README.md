@@ -1,8 +1,8 @@
 ## Real-time markdown editor
 
-Markdown editor with real-time preview made with ReactJS.
+Markdown editor converts markdown syntax or html to styled text and displays it in real time. The app was built to help with writing github README.md files but it can also be used for anything that needs markdown. App is made with HTML5, CSS3(SCSS) and React..
 
-**Live page:** <a  href="https://silly-hypatia-4e641d.netlify.com/">here</a>
+**Live page:** <a  href="https://projects.darkokojovic.com/markdown-editor/">here</a>
 
 #### Quick overview:
 
